@@ -1,0 +1,71 @@
+/***********************/
+/*ALGEMEEN CSS DOCUMENT*/
+/***********************/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/**************/
+/*KLEUR PALLET*/
+/**************/
+ :root{
+   --primary-color:#1660CF; 
+   --primary-text-color:#F3F6FF;
+ }
+
+/**********/
+/*ALGEMEEN*/
+/**********/
+
+* a, * p{
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-size: 1.125rem;
+    font-family: 'popins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    margin: auto;
+    max-width: 70em;
+    padding: 1.5em;
+    width: 100%;
+}
+
+html {
+  background-color: var(--primary-color) ;
+}
+
+* ul {
+  list-style: none;
+}
+
+/*********/
+/*NAV-BAR*/
+/*********/
+
+nav {
+ display: flex;
+ justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+}
+
+nav li:first-of-type a{
+  font-weight: 700;
+  font-size: 1.75rem;
+  font-family: 'kopius', serif;
+}
+
+nav li:nth-of-type(2) {
+  margin-left: auto;
+}
+

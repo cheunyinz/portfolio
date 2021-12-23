@@ -1,0 +1,9 @@
+@import url(/styles/main_style.css);
+
+main header p:first-of-type {
+    font-family: 'kopius', 'serif';
+    font-weight: 700;
+    font-size: 2rem;
+
+    margin-bottom: .5rem;
+}
