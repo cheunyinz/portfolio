@@ -1,25 +1,59 @@
 @import url(main_style.css);
 
-main header {
-
+main header div {
+    padding-left: calc(50vw - 37.5rem);
 }
 
-main header p:first-of-type {
+main header p {
+    padding: 1.5rem;
+}
+
+main header div:last-of-type {
+    background-color: var(--secondary-color);
+    margin-right: max(calc(50vw - 37.5rem), 1rem);
+    border-radius: 0 .25em .25em 0;
+    animation: headerSlideIn 2.5s;
+}
+
+@keyframes headerFadeIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes headerSlideIn {
+    0% {
+        transform: translate(-98%);
+    }
+
+    20% {
+
+        transform: translate(-98%);
+    }
+
+    100% {
+        transform: translate(0%);
+    }
+}
+
+
+main header div:first-of-type p {
     font-family: 'kopius', 'serif';
     font-weight: 700;
     font-size: clamp(2rem, 8vw, 5rem);
+    animation: headerFadeIn 2s;
 
-    margin-bottom: .5rem;
-    max-width: 55rem;
-
+    max-width: 30rem;
 }
 
-main header p:last-of-type {
+main header div:last-of-type p {
     font-size: clamp(1rem, 4.2vw, 2rem);
     color: var(--primary-color);
-
-    background-color: var(--secondary-color);
     max-width: 45rem;
-    padding-block: 2rem;
 }
-
