@@ -13,8 +13,8 @@
 /*KLEUR PALLET*/
 /**************/
  :root{
-   --primary-color:#1660CF; 
-   --primary-text-color:#F3F6FF;
+   --primary-color:#0A387D; 
+   --secondary-color:#F3F6FF;
  }
 
 /**********/
@@ -23,17 +23,17 @@
 
 * a, * p{
     text-decoration: none;
-    color: var(--primary-text-color);
-    font-size: 1.125rem;
+    color: var(--secondary-color);
+    font-size: 18px;
     font-family: 'popins', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
 .container {
-    margin: auto;
     max-width: 70em;
     padding: 1.5em;
     width: 100%;
+    margin: auto;
 }
 
 html {
@@ -49,8 +49,7 @@ html {
 /*********/
 
 nav {
- display: flex;
- justify-content: center;
+ margin-bottom: 2.8em;
 }
 
 nav ul {
