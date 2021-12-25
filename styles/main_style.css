@@ -9,13 +9,22 @@
   margin: 0;
   padding: 0;
 }
-/**************/
-/*KLEUR PALLET*/
-/**************/
+/*******************/
+/*CUSTOM PROPERTIES*/
+/*******************/
+
  :root{
+
+  /*kleur palet*/
    --primary-color:#0A387D; 
    --secondary-color:#F3F6FF;
+
+
+   /*algemeen measurements*/
+   --outer-empty-space:calc(50vw - 37.5rem);
  }
+
+
 
 /**********/
 /*ALGEMEEN*/

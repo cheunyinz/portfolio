@@ -1,29 +1,31 @@
 @import url(main_style.css);
 
-main header div {
-    padding-left: calc(50vw - 37.5rem);
+main header {
+    position: relative;
+    height: calc(100vh - 7.95rem);
 }
 
-main header p {
-    padding: 1.5rem;
+main header div {
+    padding-left: var(--outer-empty-space);
 }
 
 main header div:last-of-type {
     position: relative;
-    margin-right: max(calc(50vw - 37.5rem), 1rem);
+    margin-right: max(var(--outer-empty-space), 1rem);
 }
 
 main header div:last-of-type::after {
     content: '';
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
 
     border-radius: 0 .25em .25em 0;
     background-color: var(--secondary-color);
+
     animation: headerSlideIn 1.5s;
     animation-timing-function: linear;
 }
@@ -35,14 +37,44 @@ main header div:first-of-type p {
     font-size: clamp(2rem, 8vw, 5rem);
     
     max-width: 10em;
-    animation: elementsFadeIn 1.5s;
+    padding: clamp(1rem, 2.5vw, 2rem);
+
+    animation: elementsFadeIn 1s;
     animation-timing-function: linear;
 }
 
 main header div:last-of-type p {
     font-size: clamp(1rem, 4.2vw, 2rem);
     color: var(--primary-color);
-    max-width: 45rem;
+
+    max-width: 22em;
+    padding: clamp(1rem, 2.5vw, 2rem);
+
+    animation: headerLastTextFadeIn 2.5s;
+    animation-timing-function: linear;
+}
+
+main header > p  {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    width: max-content;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+
+    font-weight: 200;
+}
+
+main header > p::before {
+    content: '';
+    width: .2rem;
+    height: 4em;
+    background-color: var(--secondary-color);
+
 }
 
 @keyframes elementsFadeIn {
@@ -62,12 +94,29 @@ main header div:last-of-type p {
         transform: translate(-98%);
     }
 
-    30% {
+    40% {
 
         transform: translate(-98%);
     }
 
     100% {
         transform: translate(0%);
+    }
+}
+
+@keyframes headerLastTextFadeIn {
+    0% {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    55% {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    100%{
+        opacity: 1;
+        transform: rotateX(0);
     }
 }
