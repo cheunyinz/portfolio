@@ -2,7 +2,7 @@
 
 main header {
     position: relative;
-    height: calc(100vh - 7.95rem);
+    /* height: calc(100vh - 7.95rem); */
 }
 
 main header div {
@@ -26,7 +26,7 @@ main header div:last-of-type::after {
     border-radius: 0 .25em .25em 0;
     background-color: var(--secondary-color);
 
-    animation: headerSlideIn 1.5s;
+    animation: headerSlideIn 1s;
     animation-timing-function: linear;
 }
 
@@ -35,7 +35,7 @@ main header div:first-of-type p {
     font-family: 'kopius', 'serif';
     font-weight: 700;
     font-size: clamp(2rem, 8vw, 5rem);
-    
+
     max-width: 10em;
     padding: clamp(1rem, 2.5vw, 2rem);
 
@@ -50,13 +50,13 @@ main header div:last-of-type p {
     max-width: 22em;
     padding: clamp(1rem, 2.5vw, 2rem);
 
-    animation: headerLastTextFadeIn 2.5s;
+    animation: headerLastTextFadeIn 2s;
     animation-timing-function: linear;
 }
 
-main header > p  {
+/* main header>p {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -67,13 +67,18 @@ main header > p  {
     right: 50%;
 
     font-weight: 200;
-}
+} */
 
-main header > p::before {
+main header>p::before {
     content: '';
     width: .2rem;
     height: 4em;
     background-color: var(--secondary-color);
+
+}
+
+
+main article:first-of-type section:first-of-type {
 
 }
 
@@ -91,12 +96,12 @@ main header > p::before {
 
 @keyframes headerSlideIn {
     0% {
-        transform: translate(-98%);
+        transform: translate(-100%);
     }
 
     40% {
 
-        transform: translate(-98%);
+        transform: translate(-100%);
     }
 
     100% {
@@ -115,8 +120,16 @@ main header > p::before {
         transform: rotateX(-10deg);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: rotateX(0);
     }
 }
+
+@media screen and (min-width:40em) {
+    main header>p {
+        
+    }
+    
+} 
+    
