@@ -26,7 +26,7 @@ main header div:last-of-type::after {
     border-radius: 0 .25em .25em 0;
     background-color: var(--secondary-color);
 
-    animation: headerSlideIn 1s;
+    animation: headerSlideIn .88s;
     animation-timing-function: linear;
 }
 
@@ -37,7 +37,7 @@ main header div:first-of-type p {
     font-size: clamp(2rem, 8vw, 5rem);
 
     max-width: 10em;
-    padding: clamp(1rem, 2.5vw, 2rem);
+    padding: clamp(1rem, 2.5vw, 2rem) 1.5rem ;
 
     animation: elementsFadeIn 1s;
     animation-timing-function: linear;
@@ -48,7 +48,7 @@ main header div:last-of-type p {
     color: var(--primary-color);
 
     max-width: 22em;
-    padding: clamp(1rem, 2.5vw, 2rem);
+    padding: clamp(1rem, 2.5vw, 2rem) 1.5rem;
 
     animation: headerLastTextFadeIn 2s;
     animation-timing-function: linear;
@@ -77,10 +77,14 @@ main header>p::before {
 
 }
 
+/*my work*/
 
-main article:first-of-type section:first-of-type {
-
+main article:first-of-type h2 {
+    color: var(--secondary-color);
+    font-family: 'kopius', serif;
 }
+
+
 
 @keyframes elementsFadeIn {
     from {
