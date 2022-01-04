@@ -12,6 +12,7 @@ main header div {
 main header div:last-of-type {
     position: relative;
     margin-right: max(var(--outer-empty-space), 1rem);
+    margin-bottom: 5em;
 }
 
 main header div:last-of-type::after {
@@ -34,23 +35,24 @@ main header div:last-of-type::after {
 main header div:first-of-type p {
     font-family: 'kopius', 'serif';
     font-weight: 700;
-    font-size: clamp(2rem, 8vw, 5rem);
+    font-size: clamp(2rem, 10vw, 5rem);
 
     max-width: 10em;
-    padding: clamp(1rem, 2.5vw, 2rem) 1.5rem ;
+    padding: clamp(1rem, 2.5vw, 2rem) 1.5rem;
 
     animation: elementsFadeIn 1s;
     animation-timing-function: linear;
 }
 
 main header div:last-of-type p {
-    font-size: clamp(1rem, 4.2vw, 2rem);
+    font-size: clamp(1rem, 4.5vw, 2rem);
+
     color: var(--primary-color);
 
     max-width: 22em;
     padding: clamp(1rem, 2.5vw, 2rem) 1.5rem;
 
-    animation: headerLastTextFadeIn 2s;
+    animation: headerLastTextFadeIn 1.8s;
     animation-timing-function: linear;
 }
 
@@ -77,11 +79,80 @@ main header>p::before {
 
 }
 
+/*********/
 /*my work*/
+/*********/
 
-main article:first-of-type h2 {
+main section:first-of-type h2 {
     color: var(--secondary-color);
-    font-family: 'kopius', serif;
+    font-size: 2rem;
+
+    padding-left: max(1.5rem, calc(var(--outer-empty-space) + 1.5rem));
+}
+
+main section:first-of-type > ul > li:not(:nth-of-type(2)) {
+    position: relative;
+}
+
+main section:first-of-type > ul > li:not(:nth-of-type(2)):after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 50%;
+
+    border-radius: .25em;
+    background-color: var(--secondary-color);
+
+}
+
+
+main section:first-of-type > ul > li:nth-of-type(2) {
+ 
+}
+
+main section:first-of-type ul li img {
+   width: clamp(240px,60vw, 580px);
+   box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.58);
+   border-radius: 2%;
+}
+
+/* tijdelijk boxshadow kloten*/
+
+/* main section:first-of-type ul li:not(:first-of-type) img {
+    box-shadow: none;
+}
+
+main section:first-of-type > ul > li {
+    position: relative;
+}
+main section:first-of-type > ul > li:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 50%;
+
+    border-radius: .25em;
+    background-color: var(--secondary-color);
+
+} */
+
+/********* */
+
+main section:first-of-type ul li h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+main section:first-of-type ul li p {
+    color: var(--primary-color);
+    max-width: 580px;
 }
 
 
@@ -129,11 +200,3 @@ main article:first-of-type h2 {
         transform: rotateX(0);
     }
 }
-
-@media screen and (min-width:40em) {
-    main header>p {
-        
-    }
-    
-} 
-    
