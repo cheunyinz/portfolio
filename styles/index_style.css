@@ -2,7 +2,6 @@
 
 main header {
     position: relative;
-    /* height: calc(100vh - 7.95rem); */
 }
 
 main header div {
@@ -14,6 +13,19 @@ main header div:last-of-type {
     margin-right: max(var(--outer-empty-space), 1.5rem);
     margin-bottom: 5em;
 }
+
+main header div:first-of-type p {
+    font-family: 'kopius', 'serif';
+    font-weight: 700;
+    font-size: clamp(2rem, 10vw + 1rem, 5rem);
+
+    max-width: 10em;
+    padding: clamp(1rem, 2.5vw, 2rem) 1.5rem;
+
+    animation: elementsFadeIn .6s;
+    animation-timing-function: linear;
+}
+
 
 main header div:last-of-type::after {
     content: '';
@@ -27,20 +39,7 @@ main header div:last-of-type::after {
     border-radius: 0 .25em .25em 0;
     background-color: var(--secondary-color);
 
-    animation: headerSlideIn .88s;
-    animation-timing-function: linear;
-}
-
-
-main header div:first-of-type p {
-    font-family: 'kopius', 'serif';
-    font-weight: 700;
-    font-size: clamp(2rem, 10vw + 1rem, 5rem);
-
-    max-width: 10em;
-    padding: clamp(1rem, 2.5vw, 2rem) 1.5rem;
-
-    animation: elementsFadeIn 1s;
+    animation: headerSlideIn 1.2s;
     animation-timing-function: linear;
 }
 
@@ -52,24 +51,9 @@ main header div:last-of-type p {
     max-width: 22em;
     padding: clamp(1rem, 2.5vw, 2rem) 1.5rem;
 
-    animation: headerLastTextFadeIn 1.8s;
+    animation: headerLastTextFadeIn 2s;
     animation-timing-function: linear;
 }
-
-/* main header>p {
-    position: absolute;
-    display: none;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-
-    width: max-content;
-    bottom: 0;
-    left: 50%;
-    right: 50%;
-
-    font-weight: 200;
-} */
 
 main header>p::before {
     content: '';
@@ -127,10 +111,25 @@ main section:first-of-type>ul>li ul {
 
 
 main section:first-of-type>ul>li ul li:last-of-type {
+    display: flex;
+    flex-direction: column;
+
     height: min-content;
     align-self: flex-end;
+
+    outline: 2px red solid;
 }
 
+main section:first-of-type>ul>li:nth-of-type(2) li:first-of-type {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main section:first-of-type ul li:nth-of-type(2) li:last-of-type {
+    align-items: flex-end;
+
+    text-align: right;
+}
 
 main section:first-of-type>ul>li::after {
     content: '';
@@ -155,17 +154,6 @@ main section:first-of-type>ul>li:nth-of-type(2)::after {
     right: 0;
 }
 
-main section:first-of-type>ul>li:nth-of-type(2) li:first-of-type {
-    display: flex;
-    justify-content: flex-end;
-}
-
-main section:first-of-type ul li:nth-of-type(2) li:last-of-type {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
 
 main section:first-of-type ul li a {
     display: block;
@@ -178,25 +166,34 @@ main section:first-of-type ul li img {
 
     box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.58);
     border-radius: 2%;
+
+    padding: .5rem;
 }
 
+main section:first-of-type ul li:first-of-type img {
+    background: var(--maxaro-color);
+}
+
+main section:first-of-type ul li:nth-of-type(2) img {
+    background: var(--tamagotchi-color);
+}
+
+main section:first-of-type ul li:last-of-type img {
+    background: var(--traved-color);
+}
 
 main section:first-of-type ul li h3 {
 
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: var(--primary-color);
+    font-size: clamp(1.25rem, calc(1vw + 1rem), 1.75rem);
 }
 
 main section:first-of-type ul li p {
     color: var(--primary-color);
-    max-width: 30em;
+    font-size: clamp(1rem, calc(.1vw + 1rem), 1.25rem);
 }
-
-main section:first-of-type ul li:nth-of-type(2) li:last-of-type p {
-    text-align: end;
-}
-
 
 
 
@@ -217,7 +214,7 @@ main section:first-of-type ul li:nth-of-type(2) li:last-of-type p {
         transform: translate(-100%);
     }
 
-    40% {
+    70% {
 
         transform: translate(-100%);
     }
@@ -233,7 +230,7 @@ main section:first-of-type ul li:nth-of-type(2) li:last-of-type p {
         transform: rotateX(-10deg);
     }
 
-    55% {
+    70% {
         opacity: 0;
         transform: rotateX(-10deg);
     }
@@ -257,7 +254,19 @@ main section:first-of-type ul li:nth-of-type(2) li:last-of-type p {
 
 
 @media screen and (min-width: 65em) {
-    main section:first-of-type>ul>li:nth-of-type(2) li:first-of-type {
+    
+    main section:first-of-type ul li li:last-of-type {
+        text-align: right;
+    }
+
+    main section:first-of-type ul li:nth-of-type(2) li:last-of-type {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+
+    
+    main section:first-of-type ul li:nth-of-type(2) li:first-of-type {
         order: 2;
     }
 }

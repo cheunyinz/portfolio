@@ -20,10 +20,15 @@
    --primary-color:#082a5e;
    --secondary-color:#f4faff;
 
+   --maxaro-color:#009CA6;
+   --tamagotchi-color:#E9C386;
+   --traved-color:#db5342;
+
 
    /*algemeen measurements*/
    --outer-empty-space:calc(50vw - 37.5rem);
  }
+
 
 
 
