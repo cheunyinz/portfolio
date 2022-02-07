@@ -33,9 +33,9 @@ main header h1 a {
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
-    
-    text-decoration:underline;
-    text-decoration-thickness: .5em;
+
+    /* text-decoration:underline;
+    text-decoration-thickness: .5em; */
 }
 
 
@@ -90,7 +90,7 @@ main section:first-of-type ul {
 
 main section:first-of-type ul li {
     display: grid;
-    grid-template-columns: 1fr 5em minmax(6em, auto);
+    grid-template-rows: 1fr 5em minmax(6em, auto);
     max-width: 75em;
 }
 
@@ -103,20 +103,49 @@ main section:first-of-type ul li:nth-of-type(even) {
 }
 
 main section:first-of-type ul li div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    background:var(--secondary-color);
+    
     grid-column:-1/1;
 	grid-row:2/4;
-	background:var(--secondary-color);
 	
 	padding:5em 1em 1em 1em;
+}
+
+main section:first-of-type ul li:nth-of-type(odd) div {
+    border-radius: 0 .25rem .25rem 0;
+}
+
+main section:first-of-type ul li:nth-of-type(even) div {
+    border-radius: .25rem 0 0 .25rem;
+    text-align: right;
+}
+
+main section:first-of-type ul li div time {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--paragraph-size);
+    font-weight: 600;
+
+    color: var(--primary-color);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
 main section:first-of-type ul li a {
     display: block;
     max-width: clamp(240px, 60vw, 580px);
-    grid-column:1/3;
+    grid-column:1/2;
 	grid-row:1/3;
 	margin:1em;
+}
+
+main section:first-of-type ul li:nth-of-type(even) a {
+    justify-self: end;
 }
 
 main section:first-of-type ul li img {
@@ -142,7 +171,6 @@ main section:first-of-type ul li:last-of-type img {
 }
 
 main section:first-of-type ul li h3 {
-
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: var(--primary-color);
@@ -200,7 +228,7 @@ main section:first-of-type ul li p {
 
 
 
-@media screen and (min-width: 33rem) {
+@media screen and (min-width: 50rem) {
     main section:first-of-type ul li {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr minmax(50%, auto);
@@ -212,7 +240,8 @@ main section:first-of-type ul li p {
     }
 
     main section:first-of-type ul li:nth-of-type(even) div {
-        padding: 1em calc(50% + 1em) 1em 1em 
+        padding: 1em calc(50% + 1em) 1em 1em;
+        text-align: left;
     }
 
     main section:first-of-type ul li:nth-of-type(odd) div {
@@ -222,26 +251,23 @@ main section:first-of-type ul li p {
 
     main section:first-of-type ul li a {
         width: calc(100% - 1em);
-        /* transform-origin: center 75%;
-        transform:perspective(110em) translateY(4em) rotateY(20deg) rotateX(8deg)  */
+        transform-origin: center 75%;
+        transform:perspective(110em) translateY(4em) rotateY(-20deg) rotateX(8deg) 
     }
     
 
     main section:first-of-type ul li:nth-of-type(even) a {
         grid-column: 2/3;
-        justify-self: end;
     }
 
     
 }
 
 
-@media screen and (min-width: 50.5rem) {
-
-   
-}
-
 @media screen and (min-width:75em) {
+    main section:first-of-type ul li:nth-of-type(odd) div, main section:first-of-type ul li:nth-of-type(even) div {
+        border-radius: .25rem;
 
+    }
 
 }
