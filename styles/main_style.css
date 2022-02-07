@@ -14,7 +14,10 @@
 /*******************/
 
  :root{
-
+  /*font-size*/
+  --paragraph-size:clamp(1rem, calc(.1vw + 1rem), 1.25rem);
+  --h3-size:clamp(1.25rem, calc(1vw + 1rem), 1.75rem);
+  
   /*kleur palet*/
    /* --primary-color:#0A387D;  */
    --primary-color:#082a5e;
@@ -39,8 +42,7 @@
 * a, * p{
     text-decoration: none;
     color: var(--secondary-color);
-    font-size: 16px;
-    font-family: 'popins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
@@ -61,6 +63,7 @@
 
 html {
   background-color: var(--primary-color) ;
+  scroll-behavior:smooth;
 }
 
 * ul {
