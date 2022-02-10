@@ -9,7 +9,7 @@ main header {
 main header h1{
     font-family: 'kopius', 'serif';
     font-weight: 700;
-    font-size: clamp(1.8rem, 8.5vw + 1rem, 5rem);
+    font-size: clamp(1.8rem, 8vw + 1rem, 5rem);
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
@@ -29,7 +29,7 @@ main header h1{
 main header h1 a {
     font-family: 'kopius', 'serif';
     font-weight: 700;
-    font-size: clamp(1.8rem, 8.5vw + 1rem, 5rem);
+    font-size: clamp(1.8rem, 8vw + 1rem, 5rem);
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
@@ -45,18 +45,20 @@ main header > p {
     grid-template-columns: minmax(auto,25em);
 
     font-size: clamp(1rem, 1vw + 1rem, 1.8rem);
-    line-height: 1.48em;
 
     color: var(--primary-color);
+    line-height: 1.48em;
+
     background-color: var(--secondary-color);
+    border-radius: 0 .25em .25em 0;
 
     max-width: calc(75rem + var( --outer-empty-space));
     padding: clamp(1rem, 2.5vw, 2rem) 1.5rem clamp(1rem, 2.5vw, 2rem) max(1.5rem ,calc(var(--outer-empty-space) + 1.5rem)) ;
-    border-radius: 0 .25em .25em 0;
+    margin-right: 1.5rem;
 
-    animation: headerSlideIn .36s, headerLastTextFadeIn 2s;
+    animation: headerSlideIn .36s, headerLastTextFadeIn 1.8s;
     animation-timing-function: linear;
-    animation-delay: .6s, .96s;
+    animation-delay: .48s, .88s;
     animation-fill-mode: backwards ;
 }
 
@@ -68,7 +70,7 @@ main header > p {
 main section:first-of-type {
     padding: 0;
     animation: elementsFadeIn .6s;
-    animation-delay: 1.48s;
+    animation-delay: 1.58s;
     animation-fill-mode: backwards;
     animation-timing-function: linear;
 
@@ -101,6 +103,8 @@ main section:first-of-type ul li:nth-of-type(odd) {
 main section:first-of-type ul li:nth-of-type(even) {
     margin-left: 1.5rem;
 }
+
+/*case info content */
 
 main section:first-of-type ul li div {
     display: flex;
@@ -135,8 +139,23 @@ main section:first-of-type ul li div time {
     -moz-osx-font-smoothing: grayscale;
 }
 
+main section:first-of-type ul li div h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: var(--h3-size);
+}
+
+main section:first-of-type ul li div p {
+    color: var(--primary-color);
+    font-size: var(--paragraph-size);
+    line-height: 1.6rem;
+}
+
+/*the images styling*/
 
 main section:first-of-type ul li a {
+    position: relative;
     display: block;
     max-width: clamp(240px, 60vw, 580px);
     grid-column:1/2;
@@ -148,14 +167,53 @@ main section:first-of-type ul li:nth-of-type(even) a {
     justify-self: end;
 }
 
+main section:first-of-type ul li a:hover, 
+main section:first-of-type ul li:nth-of-type(even) a:hover {
+    transform:perspective(110em) translateY(0em) rotateY(0deg) rotateX(0deg);
+}
+
+ /* main section:first-of-type ul li a:hover::before {
+    content: 'Read more';
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+
+
+
+    /* transition: 10s ease-in; 
+
+}  */
+
 main section:first-of-type ul li img {
     display: inherit;
     width: 100%;
-
-    box-shadow: 10px 8px 10px -2px rgba(0, 0, 0, 0.35);
     border-radius: 2%;
 
     padding: .5rem;
+
+    transition: box-shadow .8s ease;
+}
+
+main section:first-of-type ul li:nth-of-type(odd) img {
+    box-shadow: 10px 8px 10px -2px rgba(0, 0, 0, 0.35);
+}
+
+main section:first-of-type ul li:nth-of-type(even) img {
+    box-shadow: -10px 8px 10px -2px rgba(0, 0, 0, 0.35);
+}
+
+main section:first-of-type ul li img:hover{
+    animation: pictureBlur.8s;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.35);
+    
 }
 
 main section:first-of-type ul li:first-of-type img {
@@ -170,18 +228,6 @@ main section:first-of-type ul li:last-of-type img {
     background: var(--traved-color);
 }
 
-main section:first-of-type ul li h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: var(--primary-color);
-    font-size: var(--h3-size);
-}
-
-main section:first-of-type ul li p {
-    color: var(--primary-color);
-    font-size: var(--paragraph-size);
-    line-height: 1.6rem;
-}
 
 
 
@@ -218,6 +264,10 @@ main section:first-of-type ul li p {
 }
 
 
+/* @keyframes pictureBlur {
+    0% { -webkit-filter: blur(0px);}
+    100% { -webkit-filter: blur(5px);}
+} */
 
 
 
@@ -252,12 +302,13 @@ main section:first-of-type ul li p {
     main section:first-of-type ul li a {
         width: calc(100% - 1em);
         transform-origin: center 75%;
-        transform:perspective(110em) translateY(4em) rotateY(-20deg) rotateX(8deg) 
+        transform:perspective(110em) translateY(2em) rotateY(-20deg) rotateX(8deg);
+        transition: transform .8s ease;
     }
-    
 
     main section:first-of-type ul li:nth-of-type(even) a {
         grid-column: 2/3;
+        transform:perspective(110em) translateY(2em) rotateY(20deg) rotateX(8deg);
     }
 
     
