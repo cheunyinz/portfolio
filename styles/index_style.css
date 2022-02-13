@@ -6,7 +6,7 @@ main header {
 }
 
 
-main header h1{
+main header h1 {
     font-family: 'kopius', 'serif';
     font-weight: 700;
     font-size: clamp(1.8rem, 8vw + 1rem, 5rem);
@@ -15,7 +15,7 @@ main header h1{
     -moz-osx-font-smoothing: grayscale;
 
     display: grid;
-    grid-template-columns: minmax(auto,10em);
+    grid-template-columns: minmax(auto, 10em);
 
     max-width: 75rem;
     margin: 0 auto;
@@ -39,10 +39,10 @@ main header h1 a {
 }
 
 
-main header > p {
+main header>p {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(auto,25em);
+    grid-template-columns: minmax(auto, 25em);
 
     font-size: clamp(1rem, 1vw + 1rem, 1.8rem);
 
@@ -52,14 +52,14 @@ main header > p {
     background-color: var(--secondary-color);
     border-radius: 0 .25em .25em 0;
 
-    max-width: calc(75rem + var( --outer-empty-space));
-    padding: clamp(1rem, 2.5vw, 2rem) 1.5rem clamp(1rem, 2.5vw, 2rem) max(1.5rem ,calc(var(--outer-empty-space) + 1.5rem)) ;
+    max-width: calc(75rem + var(--outer-empty-space));
+    padding: clamp(1rem, 2.5vw, 2rem) 1.5rem clamp(1rem, 2.5vw, 2rem) max(1.5rem, calc(var(--outer-empty-space) + 1.5rem));
     margin-right: 1.5rem;
 
     animation: headerSlideIn .36s, headerLastTextFadeIn 1.8s;
     animation-timing-function: linear;
     animation-delay: .48s, .88s;
-    animation-fill-mode: backwards ;
+    animation-fill-mode: backwards;
 }
 
 
@@ -67,8 +67,10 @@ main header > p {
 /*MY WORK/
 /********/
 
-main section:first-of-type {
+main>section:first-of-type {
     padding: 0;
+    margin-bottom: 5em;
+
     animation: elementsFadeIn .6s;
     animation-delay: 1.58s;
     animation-fill-mode: backwards;
@@ -76,59 +78,59 @@ main section:first-of-type {
 
 }
 
-main section:first-of-type h2 {
+main>section:first-of-type h2 {
     color: var(--secondary-color);
     font-size: 2rem;
     padding-left: 1.5rem;
 
 }
 
-main section:first-of-type ul {
+main>section:first-of-type ul {
     display: grid;
     row-gap: 2rem;
     max-width: 75rem;
     margin: 0 auto;
 }
 
-main section:first-of-type ul li {
+main>section:first-of-type ul li {
     display: grid;
     grid-template-rows: 1fr 5em minmax(6em, auto);
     max-width: 75em;
 }
 
-main section:first-of-type ul li:nth-of-type(odd) {
+main>section:first-of-type ul li:nth-of-type(odd) {
     margin-right: 1.5rem;
 }
 
-main section:first-of-type ul li:nth-of-type(even) {
+main>section:first-of-type ul li:nth-of-type(even) {
     margin-left: 1.5rem;
 }
 
 /*case info content */
 
-main section:first-of-type ul li div {
+main>section:first-of-type ul li div {
     display: flex;
     flex-direction: column;
     justify-content: end;
 
-    background:var(--secondary-color);
-    
-    grid-column:-1/1;
-	grid-row:2/4;
-	
-	padding:5em 1em 1em 1em;
+    background: var(--secondary-color);
+
+    grid-column: -1/1;
+    grid-row: 2/4;
+
+    padding: 5em 1em 1em 1em;
 }
 
-main section:first-of-type ul li:nth-of-type(odd) div {
+main>section:first-of-type ul li:nth-of-type(odd) div {
     border-radius: 0 .25rem .25rem 0;
 }
 
-main section:first-of-type ul li:nth-of-type(even) div {
+main>section:first-of-type ul li:nth-of-type(even) div {
     border-radius: .25rem 0 0 .25rem;
     text-align: right;
 }
 
-main section:first-of-type ul li div time {
+main>section:first-of-type ul li div time {
     font-family: 'Poppins', sans-serif;
     font-size: var(--paragraph-size);
     font-weight: 600;
@@ -139,14 +141,14 @@ main section:first-of-type ul li div time {
     -moz-osx-font-smoothing: grayscale;
 }
 
-main section:first-of-type ul li div h3 {
+main>section:first-of-type ul li div h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: var(--primary-color);
     font-size: var(--h3-size);
 }
 
-main section:first-of-type ul li div p {
+main>section:first-of-type ul li div p {
     color: var(--primary-color);
     font-size: var(--paragraph-size);
     line-height: 1.6rem;
@@ -154,25 +156,25 @@ main section:first-of-type ul li div p {
 
 /*the images styling*/
 
-main section:first-of-type ul li a {
+main>section:first-of-type ul li a {
     position: relative;
     display: block;
     max-width: clamp(240px, 60vw, 580px);
-    grid-column:1/2;
-	grid-row:1/3;
-	margin:1em;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin: 1em;
 }
 
-main section:first-of-type ul li:nth-of-type(even) a {
+main>section:first-of-type ul li:nth-of-type(even) a {
     justify-self: end;
 }
 
-main section:first-of-type ul li a:hover, 
-main section:first-of-type ul li:nth-of-type(even) a:hover {
-    transform:perspective(110em) translateY(0em) rotateY(0deg) rotateX(0deg);
+main>section:first-of-type ul li a:hover,
+main>section:first-of-type ul li:nth-of-type(even) a:hover {
+    transform: perspective(110em) translateY(0em) rotateY(0deg) rotateX(0deg);
 }
 
- /* main section:first-of-type ul li a:hover::before {
+/* main section:first-of-type ul li a:hover::before {
     content: 'Read more';
     position: absolute;
     inset: 0;
@@ -191,7 +193,7 @@ main section:first-of-type ul li:nth-of-type(even) a:hover {
 
 }  */
 
-main section:first-of-type ul li img {
+main>section:first-of-type ul li img {
     display: inherit;
     width: 100%;
     border-radius: 2%;
@@ -201,35 +203,91 @@ main section:first-of-type ul li img {
     transition: box-shadow .8s ease;
 }
 
-main section:first-of-type ul li:nth-of-type(odd) img {
+
+
+main>section:first-of-type ul li:nth-of-type(odd) img {
     box-shadow: 10px 8px 10px -2px rgba(0, 0, 0, 0.35);
 }
 
-main section:first-of-type ul li:nth-of-type(even) img {
+main>section:first-of-type ul li:nth-of-type(even) img {
     box-shadow: -10px 8px 10px -2px rgba(0, 0, 0, 0.35);
 }
 
-main section:first-of-type ul li img:hover{
+main>section:first-of-type ul li img:hover {
     animation: pictureBlur.8s;
     animation-fill-mode: forwards;
     box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.35);
-    
+
 }
 
-main section:first-of-type ul li:first-of-type img {
+main>section:first-of-type ul li:first-of-type img {
     background: var(--maxaro-color);
 }
 
-main section:first-of-type ul li:nth-of-type(2) img {
+main>section:first-of-type ul li:nth-of-type(2) img {
     background: var(--tamagotchi-color);
 }
 
-main section:first-of-type ul li:last-of-type img {
+main>section:first-of-type ul li:last-of-type img {
     background: var(--traved-color);
 }
 
 
+/**********/
+/*ABOUT ME*/
+/**********/
 
+main article {
+    padding: 0;
+}
+
+main article h2 {
+    padding-left: max(1.5rem, var(--outer-empty-space));
+    font-size: 2rem;
+}
+
+main article section:first-of-type {
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns:1fr;
+    margin-bottom: 1rem;
+}
+
+main article section:first-of-type div {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 1.5rem;
+    gap: 1rem;
+    line-height: 1.6;
+}
+
+main article section:first-of-type div p {
+    font-size: var(--paragraph-size);
+}
+
+main article section:first-of-type img {
+    background-color: var(--secondary-color);
+    width: 100%;
+    object-fit: contain;
+    max-height: 18rem;
+
+    margin-top: 1rem;
+
+    order: -1;
+}
+
+main article section:last-of-type h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+main article section:last-of-type ul {
+    list-style: disc;
+
+    color: var(--secondary-color);
+}
 
 @keyframes elementsFadeIn {
     from {
@@ -302,21 +360,51 @@ main section:first-of-type ul li:last-of-type img {
     main section:first-of-type ul li a {
         width: calc(100% - 1em);
         transform-origin: center 75%;
-        transform:perspective(110em) translateY(2em) rotateY(-20deg) rotateX(8deg);
+        transform: perspective(110em) translateY(2em) rotateY(-20deg) rotateX(8deg);
         transition: transform .8s ease;
     }
 
     main section:first-of-type ul li:nth-of-type(even) a {
         grid-column: 2/3;
-        transform:perspective(110em) translateY(2em) rotateY(20deg) rotateX(8deg);
+        transform: perspective(110em) translateY(2em) rotateY(20deg) rotateX(8deg);
     }
 
     
+    /**********/
+    /*ABOUT ME*/
+    /**********/
+
+    main article section:first-of-type {
+        display: grid;
+        column-gap: 0rem;
+        grid-template-columns:max(1.5rem, var(--outer-empty-space)) 1fr 1fr var(--outer-empty-space);
+    }
+
+    main article section:first-of-type img {
+        object-fit: cover;
+        order: 1;
+        max-height: 28rem;
+        padding-right: var(--outer-empty-space);
+
+        grid-column: 3 / 5;
+
+        border-radius: 2% 0 0 2%;
+
+    }
+
+    main article section:first-of-type div {
+        grid-column: 2 / 3;
+        margin-inline: 0rem;
+        padding-right: 1rem;
+    }
+   
 }
 
 
 @media screen and (min-width:75em) {
-    main section:first-of-type ul li:nth-of-type(odd) div, main section:first-of-type ul li:nth-of-type(even) div {
+
+    main section:first-of-type ul li:nth-of-type(odd) div,
+    main section:first-of-type ul li:nth-of-type(even) div {
         border-radius: .25rem;
 
     }

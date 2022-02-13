@@ -15,7 +15,7 @@
 
  :root{
   /*font-size*/
-  --paragraph-size:clamp(1rem, calc(.1vw + 1rem), 1.25rem);
+  --paragraph-size:clamp(1rem, calc(.28vw + 1rem), 1.28rem);
   --h3-size:clamp(1.25rem, calc(1vw + 1rem), 1.75rem);
   
   /*kleur palet*/
@@ -39,7 +39,7 @@
 /*ALGEMEEN*/
 /**********/
 
-* a, * p{
+* a, * p, * li{
     text-decoration: none;
     color: var(--secondary-color);
     font-family: 'Poppins', sans-serif;
@@ -48,15 +48,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-* h1, * h2, * h3, * h4 {
+* h1, * h2 {
   font-family: 'kopius', serif;
   color: var(--secondary-color);
 }
 
 
 .container {
-    max-width: 75em;
-    padding: 1.5em;
+    max-width: 75rem;
+    padding: 1.5rem;
     width: 100%;
     margin: auto;
 }
@@ -92,5 +92,13 @@ nav li:first-of-type a{
 
 nav li:nth-of-type(2) {
   margin-left: auto;
+}
+
+/********/
+/*FOOTER*/
+/********/
+
+footer {
+  background-color: var(--secondary-color);
 }
 
