@@ -109,8 +109,9 @@ main>section:first-of-type ul li:nth-of-type(even) {
 /*case info content */
 
 main>section:first-of-type ul li div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(4, min-content);
     justify-content: end;
 
     background: var(--secondary-color);
@@ -119,6 +120,14 @@ main>section:first-of-type ul li div {
     grid-row: 2/4;
 
     padding: 5em 1em 1em 1em;
+}
+
+main>section:first-of-type ul li:nth-of-type(2) div {
+    grid-template-columns: 30% 70%;
+}
+
+main>section:first-of-type ul li div > *:not(:nth-child(4),:last-child) {
+    grid-column: 1/3;
 }
 
 main>section:first-of-type ul li:nth-of-type(odd) div {
@@ -154,9 +163,58 @@ main>section:first-of-type ul li div p {
     line-height: 1.6rem;
 }
 
+main>section:first-of-type ul li div a {
+    color: var(--primary-color);
+    padding-top: 1.5rem;
+    font-size: .875rem;
+
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    justify-self: start;
+}
+
+main>section:first-of-type ul li:nth-of-type(2) div a {
+    justify-self: end;
+}
+
+
+
+main>section:first-of-type ul li div a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scale(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+}
+
+main>section:first-of-type ul li div a:hover::after {
+    transform:scaleX(1);
+    transform-origin:left;
+}
+
+main>section:first-of-type ul li:first-of-type div a::after {
+    background-color: var(--maxaro-color);
+}
+
+main>section:first-of-type ul li:nth-of-type(2) div a::after {
+    background-color: var(--tamagotchi-color);
+}
+
+main>section:first-of-type ul li:last-of-type div a::after {
+    background-color: var(--traved-color);
+}
+
+
+
+
 /*the images styling*/
 
-main>section:first-of-type ul li a {
+main>section:first-of-type ul li> a {
     position: relative;
     display: block;
     max-width: clamp(240px, 60vw, 580px);
@@ -165,12 +223,12 @@ main>section:first-of-type ul li a {
     margin: 1em;
 }
 
-main>section:first-of-type ul li:nth-of-type(even) a {
+main>section:first-of-type ul li:nth-of-type(even)> a {
     justify-self: end;
 }
 
-main>section:first-of-type ul li a:hover,
-main>section:first-of-type ul li:nth-of-type(even) a:hover {
+main>section:first-of-type ul li> a:hover,
+main>section:first-of-type ul li:nth-of-type(even)> a:hover {
     transform: perspective(110em) translateY(0em) rotateY(0deg) rotateX(0deg);
 }
 
@@ -231,6 +289,9 @@ main>section:first-of-type ul li:nth-of-type(2) img {
 main>section:first-of-type ul li:last-of-type img {
     background: var(--traved-color);
 }
+
+
+
 
 
 /**********/
@@ -411,18 +472,25 @@ main article:last-of-type li:last-of-type::before {
         text-align: right;
     }
 
-    main section:first-of-type ul li a {
+    main section:first-of-type ul li > a {
         width: calc(100% - 1em);
         transform-origin: center 75%;
         transform: perspective(110em) translateY(2em) rotateY(-20deg) rotateX(8deg);
         transition: transform .8s ease;
     }
 
-    main section:first-of-type ul li:nth-of-type(even) a {
+    main section:first-of-type ul li:nth-of-type(even) > a {
         grid-column: 2/3;
         transform: perspective(110em) translateY(2em) rotateY(20deg) rotateX(8deg);
     }
 
+    main>section:first-of-type ul li div a {
+        justify-self: end;
+    }
+    
+    main>section:first-of-type ul li:nth-of-type(2) div a {
+        justify-self: start;
+    }
 
     /**********/
     /*ABOUT ME*/
