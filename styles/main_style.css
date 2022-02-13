@@ -100,5 +100,49 @@ nav li:nth-of-type(2) {
 
 footer {
   background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-block: 1.5rem .5rem;
+ 
+}
+
+footer ul {
+  display: flex;
+  gap: 1.5rem;
+
+  margin-bottom: .8rem;
+}
+
+footer a{
+  display: block;
+}
+
+footer a, footer p {
+  color: var(--primary-color);
+}
+
+footer ul li{
+  display: flex;
+  align-items: center;
+}
+
+footer p::before {
+  content: "©";
+
+  margin-right: .5rem;
+
+  width: .5rem;
+  height: .5rem;
+}
+
+footer img{
+  display: inherit;
+  transition: .3s;
+}
+
+footer img:hover{
+  transform: scale(1.2);
 }
 
