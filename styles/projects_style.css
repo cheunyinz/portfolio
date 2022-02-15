@@ -1,0 +1,137 @@
+@import url(main_style.css);
+
+main {
+    animation: elementsFadeIn .6s;
+    animation-delay: .1s;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+}
+
+@keyframes elementsFadeIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+main article:first-of-type *:not(div), :is(main) > section, a, img{
+   max-width: 50rem;
+}
+
+main article:first-of-type div:first-of-type{
+    display: flex;
+    justify-content: center;
+
+    border-radius: 1%;
+
+    width: 100%;
+}
+
+main article:first-of-type div img{
+    padding-block: 1.5rem;
+}
+
+main img {
+    display: block;
+    height: 32rem;
+
+    width: 100%;
+}
+
+main article:first-of-type > img {
+    margin: 2rem auto;
+
+    border-radius: 1%;
+}
+
+
+.tp_Article > img{
+    object-fit: contain;
+}
+
+.mc_divImg {
+    background-color: var(--maxaro-color);
+}
+
+.p_divImg {
+    background-color: var(--tamagotchi-color);
+}
+
+.tp_divImg {
+    background-color: var(--traved-color);
+}
+
+
+main article:first-of-type p {
+    margin-block: 1.5rem;
+    font-size: var(--paragraph-size);
+
+    margin: 1rem auto;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+
+    margin: 2.5rem auto 0rem auto;
+}
+
+main section a{
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+
+    margin-bottom: .5rem;
+}
+
+main section a:last-of-type {
+    margin: auto;
+    text-align: center;
+
+    transition: .3s ease;
+}
+
+main section a:last-of-type:hover {
+    transform: translateY(-1rem);
+}
+
+
+main section a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scale(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+    background-color: var(--maxaro-color);
+  }
+  
+  main section a:hover:after{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .mc_aSection a::after {
+    background-color: var(--maxaro-color);
+  }
+
+  .p_aSection a::after {
+      background-color: var(--tamagotchi-color);
+  }
+  
+  .tp_aSection a::after {
+      background-color: var(--traved-color);
+  }
