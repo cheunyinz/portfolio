@@ -20,7 +20,6 @@
   --h3-size: clamp(1.25rem, calc(1vw + 1rem), 1.75rem);
 
   /*kleur palet*/
-  /* --primary-color:#0A387D;  */
   --primary-color: #082a5e;
   --secondary-color: #f4faff;
 
@@ -46,9 +45,11 @@
   text-decoration: none;
   color: var(--secondary-color);
   font-family: 'Poppins', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
   -moz-osx-font-smoothing: grayscale;
+  
   line-height: 1.6;
 }
 
