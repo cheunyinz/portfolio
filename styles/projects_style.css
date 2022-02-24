@@ -7,28 +7,33 @@ main {
     animation-timing-function: linear;
 }
 
-@keyframes elementsFadeIn {
-    from {
-        opacity: 0;
-        transform: rotateX(-10deg);
-    }
-
-    to {
-        opacity: 1;
-        transform: rotateX(0);
-    }
-}
-
 main h2 {
     font-size: 2rem;
+    margin-bottom: .25rem;
+}
+
+main time {
+    color: var(--secondary-color);
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+    -moz-osx-font-smoothing: grayscale;
+
     margin-bottom: 1.5rem;
 }
 
-main article:first-of-type *:not(div), :is(main) > section, a, img{
-   max-width: 50rem;
+main article:first-of-type *:not(div),
+:is(main)>section,
+a,
+img {
+    max-width: 50rem;
 }
 
-main article:first-of-type div:first-of-type{
+main article:first-of-type div:first-of-type {
     display: flex;
     justify-content: center;
 
@@ -37,7 +42,7 @@ main article:first-of-type div:first-of-type{
     width: 100%;
 }
 
-main article:first-of-type div img{
+main article:first-of-type div img {
     padding-block: 1.5rem;
 }
 
@@ -49,14 +54,14 @@ main img {
     width: 100%;
 }
 
-main article:first-of-type > img {
+main article:first-of-type>img {
     margin: 2rem auto;
 
     border-radius: 1%;
 }
 
 
-.tp_Article > img{
+.tp_Article>img {
     object-fit: contain;
 }
 
@@ -92,22 +97,33 @@ main section a{
     position: relative;
     width: fit-content;
 
-    margin-bottom: .5rem;
+
+    font-size: var(--paragraph-size);
 }
 
-main section a:last-of-type {
-    margin: auto;
-    text-align: center;
+main section li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
 
-    transition: .3s ease;
+    margin-bottom: .8rem;
+    padding-bottom: .125rem;
 }
 
-main section a:last-of-type:hover {
-    transform: translateY(-1rem);
+main section li::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    opacity: .5;
 }
 
-
-main section a::after {
+main section li::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -117,22 +133,70 @@ main section a::after {
     left: 0;
     transform-origin: right;
     transition: transform 0.3s ease-out;
-    background-color: var(--maxaro-color);
-  }
-  
-  main section a:hover:after{
+}
+
+main section li:hover:after {
     transform: scaleX(1);
     transform-origin: left;
-  }
+}
 
-  .mc_aSection a::after {
+.mc_aSection li::after {
     background-color: var(--maxaro-color);
-  }
+}
 
-  .p_aSection a::after {
-      background-color: var(--tamagotchi-color);
-  }
-  
-  .tp_aSection a::after {
-      background-color: var(--traved-color);
-  }
+.p_aSection li::after {
+    background-color: var(--tamagotchi-color);
+}
+
+.tp_aSection li::after {
+    background-color: var(--traved-color);
+}
+
+main section > a:last-of-type {
+    margin: auto;
+    text-align: center;
+
+    transition: 1s ease;
+}
+
+main section > a:last-of-type:hover {
+    animation: goUpJumping 1.5s;
+    transition: ease;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+
+
+
+@keyframes elementsFadeIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes goUpJumping {
+    0% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
+    }
+}

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav aria-label="navigation bar">
         <ul class="container">
             <li><a href="index.html">CYZ</a></li>
             <li><a href="#myWork">My work</a></li>
@@ -20,13 +20,13 @@
         </ul>
     </nav>
 
-    <main>
-        <header>
-            <h1>Hi, my name is <a href="#aboutMe">Cheun Yin</a></h1>
+    <main aria-label="the main section">
+        <header aria-labelledby="hero-section">
+            <h1 id="hero-section">Hi, my name is <a href="#aboutMe">Cheun Yin</a></h1>
             <p>Communication and Multimedia Design student from the Netherlands, focusing on front-end development.
             </p>
         </header>
-        <section class="container">
+        <section aria-labelledby="myWork" class="container">
             <h2 id="myWork">My work</h2>
             <ul>
                 <li>
@@ -60,7 +60,7 @@
                     <div>
                         <h3>TRAVED. prototype</h3>
                         <time datetime='2021-01'>01-2021</time>
-                        <p>My first working prototype of an web app for international students in Amsterdam, which I
+                        <p>My first working prototype of an mobile web app for international students in Amsterdam, which I
                             have developed using HTML & CSS.</p>
                         <a href="https://cheunyinz.github.io/project_invidivueel_1_traved/">Check out the prototype</a>
                         <a href="traved_prototype.html">Read more</a>
@@ -72,9 +72,9 @@
                 </li>
             </ul>
         </section>
-        <article>
+        <article aria-label="About me">
             <h2 id="aboutMe">About me</h2>
-            <section>
+            <section aria-label="introduction about me">
                 <div>
                     <p>Hello, my name is Cheun Yin Zhang. Currently I am a second year Communication Multimedia Design
                         student at the Hogeschool van Amsterdam. During this four year bachelor course I get to learn
@@ -86,8 +86,8 @@
                 </div>
                 <img src="images/self_portrait.png" alt="picture of Cheun Yin">
             </section>
-            <section class="container">
-                <h3>Technologies I have worked with</h3>
+            <section class="container" aria-labelledby="used-technologies"> 
+                <h3 id="used-technologies">Technologies I have worked with</h3>
                 <ul>
                     <li>HTML 5</li>
                     <li>CSS 3</li>
@@ -98,10 +98,12 @@
                     <li>Figma</li>
                     <li>Wordpress</li>
                 </ul>
+
+                <a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:1efb551f-756c-345d-af96-f6ea3b792d35">View my CV</a>
             </section>
         </article>
     </main>
-    <footer>
+    <footer aria-label="my social links">
         <ul>
             <li><a href="https://www.linkedin.com/in/cyinzhang/"><img src="assets/icons/social_media_icon/ld_icon.svg"
                         alt="cheun yin Linkedin"></a></li>

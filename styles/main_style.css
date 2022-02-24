@@ -22,6 +22,8 @@
   /*kleur palet*/
   --primary-color: #082a5e;
   --secondary-color: #f4faff;
+  /* --focus-color: #9CFC97; */
+  --focus-color:#009FFD;
 
   --maxaro-color: #009CA6;
   --tamagotchi-color: #E9C386;
@@ -77,6 +79,17 @@ html {
 
 * ul {
   list-style: none;
+}
+
+/**************/
+/*ANCHOR FOCUS*/
+/**************/
+
+* a:focus-visible {
+  box-shadow: 0 0 0 .5rem var(--focus-color);
+  border-radius: 2%;
+  transition: .3s ;
+  outline: transparent;
 }
 
 /*********/

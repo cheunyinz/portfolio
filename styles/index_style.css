@@ -30,9 +30,6 @@ main header h1 a {
     font-family: 'kopius', 'serif';
     font-weight: 700;
     font-size: clamp(1.8rem, 7vw + 1rem, 5rem);
-
-    /* text-decoration:underline;
-    text-decoration-thickness: .5em; */
 }
 
 
@@ -379,6 +376,51 @@ main article:last-of-type li:last-of-type::before {
     background-image: url(../assets/icons/technology_icons/wp_icon.svg);
 }
 
+main article:last-of-type section a {
+    display: block;
+    position: relative;
+
+    
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+
+    width: fit-content;
+    padding: 1em 2em;
+    border-radius: 5%;
+    margin-block: 1.5rem 1rem;
+
+}
+
+main article:last-of-type section a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+main article:last-of-type section a:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+main article:last-of-type section a::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+
+
+}
+
+main article:last-of-type section a:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
 
 
 @keyframes elementsFadeIn {
@@ -413,6 +455,19 @@ main article:last-of-type li:last-of-type::before {
     }
 }
 
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
 
 
 
