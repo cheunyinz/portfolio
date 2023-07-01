@@ -16,26 +16,21 @@
 
 :root {
   /*font-size*/
-  --paragraph-size: clamp(1rem, calc(.28vw + 1rem), 1.28rem);
+  --paragraph-size: clamp(1rem, calc(0.28vw + 1rem), 1.28rem);
   --h3-size: clamp(1.25rem, calc(1vw + 1rem), 1.75rem);
 
   /*kleur palet*/
-  --primary-color: #082a5e;
+  --primary-color: #081c3b;
   --secondary-color: #f4faff;
-  /* --focus-color: #9CFC97; */
-  --focus-color:#009FFD;
+  --focus-color: #009ffd;
 
-  --maxaro-color: #009CA6;
-  --tamagotchi-color: #E9C386;
-  --traved-color: #db5342;
-
+  --first-project-color: #3e3e3e;
+  --second-project-color: #e77c30;
+  --third-project-color: #009ca6;
 
   /*algemeen measurements*/
   --outer-empty-space: calc(50vw - 37.5rem);
 }
-
-
-
 
 /**********/
 /*ALGEMEEN*/
@@ -46,24 +41,23 @@
 * li {
   text-decoration: none;
   color: var(--secondary-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
   -moz-osx-font-smoothing: grayscale;
-  
+
   line-height: 1.6;
 }
 
 * h1,
 * h2 {
-  font-family: 'kopius', serif;
+  font-family: "kopius", serif;
   color: var(--secondary-color);
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 .container {
   max-width: 75rem;
@@ -86,9 +80,9 @@ html {
 /**************/
 
 * a:focus-visible {
-  box-shadow: 0 0 0 .5rem var(--focus-color);
+  box-shadow: 0 0 0 0.5rem var(--focus-color);
   border-radius: 2%;
-  transition: .3s ;
+  transition: 0.3s;
   outline: transparent;
 }
 
@@ -109,7 +103,7 @@ nav ul {
 nav li:first-of-type a {
   font-weight: 700;
   font-size: 1.75rem;
-  font-family: 'kopius', serif;
+  font-family: "kopius", serif;
 }
 
 nav li:nth-of-type(2) {
@@ -123,7 +117,7 @@ nav li:not(:first-child) a {
 }
 
 nav li:not(:first-child) a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scale(0);
@@ -150,15 +144,14 @@ footer {
   flex-direction: column;
   align-items: center;
 
-  padding-block: 1.5rem .5rem;
-
+  padding-block: 1.5rem 0.5rem;
 }
 
 footer ul {
   display: flex;
   gap: 1.5rem;
 
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 footer a {
@@ -178,15 +171,15 @@ footer ul li {
 footer p::before {
   content: "©";
 
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 footer img {
   display: inherit;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 footer img:hover {

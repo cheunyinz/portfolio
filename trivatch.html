@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheun Yin Zhang portfolio - Trivatch</title>
+    <link rel="stylesheet" href="styles/projects_style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lis8ieo.css">
+    <link rel="icon" href="assets/icons/favicon.png">
+</head>
+
+<body>
+    <nav>
+        <ul class="container">
+            <li><a href="index.html">CYZ</a></li>
+            <li><a href="index.html#myWork">My work</a></li>
+            <li><a href="index.html#aboutMe">About me</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h2>Trivatch</h2>
+        <time datetime='2022-04'>04-2022</time>
+        <article>
+            <div class="second_divImg"><img src="images/portfolio_pictures/trivatch/laptop.png"
+                    alt="picture of the tech track project">
+            </div>
+            <p>For this project I had the idea for a travel app which targeted to those between the ages of 18 and 50.
+                Based on user choices, the app would show suited destinations for holidays. I designed the app's
+                wireframes to bring my concept to life, starting with the user account setup, preference choosing, and
+                recommendations display pages.</p>
+            <img src="images/portfolio_pictures/trivatch/lofi.png" alt="picture of the trivatch project in lofi">
+
+            <p>
+                My focus for this project was primarily on the back-end development, as I wanted to experiment with new
+                technologies. As a result, the app's designs remained minimalistic and simple. In exploring different
+                template engines, In the beginning I chose EJS due to its beginner-friendly reputation. However, after
+                encountering some syntax difficulties, I switched to Handlebars, which offered a more intuitive syntax
+                and it was more popular than EJS according to multiple sources.
+            </p>
+            <img src="images/portfolio_pictures/trivatch/laptop_mobile.png" alt="picture of the trivatch project">
+            <p> To enable data storage and retrieval, I used MongoDB as the app's database system. First I tried using
+                the MongoDB extension instead of Mongoose, I later realized the limitations and challenges in
+                finding support for MongoDB's own extension. Nonetheless, I successfully implemented functionality that
+                allowed users to add trips to the database, including uploading photos using Multer. Additionally, users
+                could receive recommendations based on their preferences by submitting a form and retrieving data from
+                the database.
+            </p>
+            <img src="images/portfolio_pictures/trivatch/phone_1.png" alt="picture of the trivatch project">
+            <p>For this project I also had to use different API’s. Therefore I explored the Geolocation API and Reverse
+                Geocoding API for location-based features but faced difficulties in implementation. As a solution, I
+                switched to utilizing the Local Storage API to enable seamless data transfer between pages, such as
+                storing and retrieving the user's origin country selection. Additionally, I used progressive enhancement
+                by implementing JavaScript to enhance user interactions, such as adding trips and displaying pop-up
+                notifications.</p>
+            <img src="images/portfolio_pictures/trivatch/phone_2.png" alt="picture of the trivatch project">
+            <p>Throughout the development process, I had challenges in understanding backend concepts, APIs, and
+                data integration. However, through research, seeking help from teachers and student
+                assistants, and using online resources like YouTube tutorials, I overcame obstacles and deepened my
+                understanding. During this project I have made significant progress in achieving
+                the project goals and enhancing my skills in frontend and backend development.</p>
+        </article>
+        <section class="second_aSection">
+            <ul>
+                <li><a target="_blank" href="https://trivatch.onrender.com/">Check out the clone</a></li>
+                <li><a target="_blank" href="https://github.com/cheunyinz/pt_matching_app">Github repository</a></li>
+            </ul>
+            <a href="#">Go up</a>
+        </section>
+
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/cyinzhang/"><img src="assets/icons/social_media_icon/ld_icon.svg"
+                        alt="cheun yin Linkedin"></a></li>
+            <li><a href="https://github.com/cheunyinz"><img src="assets/icons/social_media_icon/gh_icon.svg"
+                        alt="cheun yin github"></a></li>
+            <li><a href="mailto: cheunyinzhang2001@hotmail.com"><img src="assets/icons/social_media_icon/mail_icon.svg"
+                        alt="cheun yin email"></a></li>
+        </ul>
+        <p>2023 Cheun Yin Zhang</p>
+    </footer>
+
+</body>
+
+</html>

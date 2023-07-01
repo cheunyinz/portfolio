@@ -21,85 +21,107 @@
     </nav>
 
     <main aria-label="the main section">
-        <header aria-labelledby="hero-section">
-            <h1 id="hero-section">Hi, my name is <a href="#aboutMe">Cheun Yin</a></h1>
-            <p>Communication and Multimedia Design student from the Netherlands, focusing on front-end development.
+        <header class="main-hero" aria-labelledby="hero-section">
+            <h1 class="main-hero__heading" id="hero-section">Hi, my name is <a href="#aboutMe">Cheun Yin</a></h1>
+            <p class="main-hero__description">Communication and Multimedia Design student from the Netherlands, focusing
+                on front-end development.
             </p>
         </header>
-        <section aria-labelledby="myWork" class="container">
-            <h2 id="myWork">My work</h2>
-            <ul>
-                <li>
-                    <div>
-                        <h3>Maxaro clone</h3>
-                        <time datetime='2021-12'>12-2021</time>
-                        <p>Replicating the responsive website of Maxaro as accurately as possible using HTML
+        <section aria-labelledby="myWork" class="projects container">
+            <h2 class="projects__heading" id="myWork">My work</h2>
+            <ul class="projects__list">
+                <li class="project project--first">
+                    <div class="project__container">
+                        <h3 class="project__name">Club and bar tracker</h3>
+                        <time class="project__date" datetime='2022-12'>12-2022</time>
+                        <p class="project__description">A web-app which visualize crowd sizes in Amsterdam's bars and
+                            clubs. Build while
+                            experimenting with Javascript libaries for the first time. </p>
+                        <a target="_blank" class="project__link" href="https://cheun-id-tech-track.netlify.app/">Check
+                            out the
+                            tracker</a>
+                        <a class="project__link" href="tech_track_project.html">Read more</a>
+                    </div>
+                    <a class="project__img-wrapper" href="./tech_track_project.html">
+                        <img class="project__img" src="images/portfolio_pictures//tech_track/tech_track_phone.png"
+                            alt="picture of tech track project">
+                    </a>
+                </li>
+                <li class="project project--second project--mirrored">
+                    <div class="project__container project__container--mirrored">
+                        <h3 class="project__name">Trivatch</h3>
+                        <time class="project__date" datetime='2022-04'>04-2022</time>
+                        <p class="project__description"> A travel app with personalized recommendations, developed while
+                            experimenting with back-end
+                            technologies for the first time.</p>
+                        <a target="_blank" class="project__link project__link--mirrored"
+                            href="https://trivatch.onrender.com/">Check out
+                            Trivatch</a>
+                        <a class="project__link project__link--mirrored" href="./trivatch.html">Read more</a>
+                    </div>
+                    <a class="project__img-wrapper project__img-wrapper--mirrored" href="./trivatch.html">
+                        <img class="project__img project__img--mirrored"
+                            src="images/portfolio_pictures/trivatch/laptop.png"
+                            alt="picture of Trivatch recommendation screen">
+                    </a>
+                </li>
+                <li class="project project--third">
+                    <div class="project__container">
+                        <h3 class="project__name">Maxaro Clone</h3>
+                        <time class="project__date" datetime='2021-12'>12-2021</time>
+                        <p class="project__description">Recreating the Maxaro website's responsive website as accurately
+                            as possible, utilizing HTML
                             and CSS.</p>
-                        <a href="https://cheunyinz.github.io/blokweb_fed/">Check out the clone</a>
-                        <a href="maxaro_clone.html">Read more</a>
+                        <a target="_blank" class="project__link" href="https://cheunyinz.github.io/blokweb_fed/">Check
+                            out the
+                            clone</a>
+                        <a class="project__link" href="./maxaro_clone.html">Read more</a>
                     </div>
-                    <a href="maxaro_clone.html">
-                        <img src="images/portfolio_pictures/maxaro_clone/mac.png"
-                            alt="picture of Maxaro clone landing screen">
-                    </a>
-                </li>
-                <li>
-                    <div>
-                        <h3>Panda Tamagotchi</h3>
-                        <time datetime='2021-03'>03-2021</time>
-                        <p> A mini game which I developed when I started learning Javascript. </p>
-                        <a href="https://cheunyinz.github.io/panda_tamagotchi/">Check out the tamagotchi</a>
-                        <a href="panda_tamagotchi.html">Read more</a>
-                    </div>
-                    <a href="panda_tamagotchi.html">
-                        <img src="images/portfolio_pictures/panda_tamagotchi/panda_tamagotchi.png"
-                            alt="picture of Panda tamagotchi homescreen">
-                    </a>
-                </li>
-                <li>
-                    <div>
-                        <h3>TRAVED. prototype</h3>
-                        <time datetime='2021-01'>01-2021</time>
-                        <p>My first working prototype of an mobile web app for international students in Amsterdam, which I
-                            have developed using HTML & CSS.</p>
-                        <a href="https://cheunyinz.github.io/project_invidivueel_1_traved/">Check out the prototype</a>
-                        <a href="traved_prototype.html">Read more</a>
-                    </div>
-                    <a href="traved_prototype.html">
-                        <img src="images/portfolio_pictures/traved_prototype/traved.png"
-                            alt="picture of Maxaro clone landing screen">
+                    <a class="project__img-wrapper" href="maxaro_clone.html">
+                        <img class="project__img" src="images/portfolio_pictures/maxaro_clone/mac.png"
+                            alt="picture of maxaro website">
                     </a>
                 </li>
             </ul>
         </section>
-        <article aria-label="About me">
-            <h2 id="aboutMe">About me</h2>
-            <section aria-label="introduction about me">
+        <article class="biography" aria-label="About me">
+            <h2 class="biography__heading" id="aboutMe">About me</h2>
+            <section class="biography__introduction" aria-label="introduction about me">
                 <div>
-                    <p>Hello, my name is Cheun Yin Zhang. Currently I am a second year Communication Multimedia Design
-                        student at the Hogeschool van Amsterdam. During this four year bachelor course I get to learn
+                    <p>Hello, my name is Cheun Yin Zhang. Currently I am in my final year of the study Communication
+                        Multimedia Design
+                        at the Hogeschool van Amsterdam. During this four year bachelor course I get to learn
                         about the different aspects of digital design such as User Expierence Design, Visual Design, and
                         Front-end development. </p>
                     <p>In the second year I chose to focus more on coding and programming. Here I got to furthermore
-                        improve myself with coding using HTML, CSS, and Javascript. On top of that I got the oppurtunity
+                        improve myself with coding using HTML, CSS, and Javascript. On top of that I got the opportunity
                         to learn the basics of back-end development by learning node.js and MongoDB. </p>
+
+                    <p>During my 3-month internship at Social Brothers in my second year, I had the chance to apply
+                        everything I had learned in the real world. It was during this internship that I discovered my
+                        true passion for front-end development as a future career. </p>
                 </div>
-                <img src="images/self_portrait.png" alt="picture of Cheun Yin">
+                <picture class="biography__img-wrapper"><img class="biography__img" src="images/self_portrait.jpg"
+                        alt="picture of Cheun Yin"></picture>
             </section>
-            <section class="container" aria-labelledby="used-technologies"> 
-                <h3 id="used-technologies">Technologies I have worked with</h3>
-                <ul>
-                    <li>HTML 5</li>
-                    <li>CSS 3</li>
-                    <li>Javascript</li>
-                    <li>node.js</li>
-                    <li>MongoDB</li>
-                    <li>VS Code</li>
-                    <li>Figma</li>
-                    <li>Wordpress</li>
+            <section class="container technologies" aria-labelledby="used-technologies">
+                <h3 class="technologies__heading" id="used-technologies">Technologies I have worked with</h3>
+                <ul class="technologies__list">
+                    <li class="technologies__technology technologies__technology--html">HTML 5</li>
+                    <li class="technologies__technology technologies__technology--css">CSS 3</li>
+                    <li class="technologies__technology technologies__technology--js">Javascript</li>
+                    <li class="technologies__technology technologies__technology--sass">Sass</li>
+                    <li class="technologies__technology technologies__technology--njs">node.js</li>
+                    <li class="technologies__technology technologies__technology--mdb">MongoDB</li>
+                    <li class="technologies__technology technologies__technology--d3">D3</li>
+                    <li class="technologies__technology technologies__technology--vs">VS Code</li>
+                    <li class="technologies__technology technologies__technology--fig">Figma</li>
+                    <li class="technologies__technology technologies__technology--wp">Wordpress</li>
                 </ul>
 
-                <a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:1efb551f-756c-345d-af96-f6ea3b792d35">View my CV</a>
+                <a
+                    href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:1efb551f-756c-345d-af96-f6ea3b792d35">View
+                    my CV</a>
             </section>
         </article>
     </main>
@@ -112,7 +134,7 @@
             <li><a href="mailto: cheunyinzhang2001@hotmail.com"><img src="assets/icons/social_media_icon/mail_icon.svg"
                         alt="cheun yin email"></a></li>
         </ul>
-        <p>2022 Cheun Yin Zhang</p>
+        <p>2023 Cheun Yin Zhang</p>
     </footer>
 
 </body>

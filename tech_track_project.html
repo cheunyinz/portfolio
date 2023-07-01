@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheun Yin Zhang portfolio - Tech Track</title>
+    <link rel="stylesheet" href="styles/projects_style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lis8ieo.css">
+    <link rel="icon" href="assets/icons/favicon.png">
+</head>
+
+<body>
+    <nav>
+        <ul class="container">
+            <li><a href="index.html">CYZ</a></li>
+            <li><a href="index.html#myWork">My work</a></li>
+            <li><a href="index.html#aboutMe">About me</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h2>Tech Track Project</h2>
+        <time datetime='2022-12'>12-2022</time>
+        <article>
+            <div class="first_divImg"><img src="images/portfolio_pictures/tech_track/tech_track_phone.png"
+                    alt="picture of the tech track project">
+            </div>
+            <p>During my Information Design minor I did a project where I had to develop a web-app where I had to show
+                data in a presentable way.
+                For this I decided to develop a mobile app which shows how busy certain bars and clubs are in Amsterdam.
+                Therefore I used new technologies such as D3, GreenSock, and Leaflet.</p>
+            <img src="images/portfolio_pictures/tech_track/tech_track_pic_1.png" alt="picture of the tech track projec">
+
+            <p>
+                In the early stages of this project, my aim was to create something useful for people travelling, using
+                live data from an API. Initially, I was thinking about doing something with airplanes but it felt too
+                similar to apps
+                like Flightradar 24. Then I remembered an issue I had during holiday: figuring out how
+                busy clubs were in the city. Existing apps were slow and clunky and each club had to be checked one by
+                one.
+                With this in mind, I decided to develop a real-time view of the crowd levels at all clubs in Amsterdam.
+            </p>
+            <p> Next, I began to look for an API that could provide real-time crowd data. However, suitable options
+                were
+                either cost money or it was written in unfamiliar programming languages. I did find some Javascript
+                solutions, but they cost money due to the need of a Google API Key. Since I coudldn't find a good API, I
+                decided to
+                create my own dataset using Google's Busy Stats. This approach still allowed me to develop a helpful
+                tool for people to check crowd levels at different clubs and bars.
+            </p>
+            <img src="images/portfolio_pictures/tech_track/tech_track_pic_2.png" alt="picture of the tech track projec">
+            <p>Once I had my dataset, I started to focus on creating a map to visually represent crowd levels. I
+                decided to use color coding and animations, with the animation becoming livelier as a place became
+                busier. Leaflet, a tool I used to lay down markers for each location, was straightforward to set up.
+                However, the task of coloring each marker based on crowd sizes became a challenge. With Laura's
+                suggestion of assigning specific styles to the markers, and animating them, I was able to overcome this
+                hurdle.</p>
+            <p>Another feature I included was route descriptions that became accessible by clicking on a marker.
+                This was harder to do than expected due to the variability in Google maps links. Yet, after some
+                experimentation, I achieved the desired outcome.</p>
+
+            <p>At the end of my project, my attention turned towards refining my code. Originally, my
+                functions lacked flexibility due to "fixed" variables. Learning about the importance of parameters from
+                my professors led me to change all my necessary functions into reusable ones. I also grouped global
+                variables
+                into a single object for easier readability and efficiency.</p>
+        </article>
+        <section class="first_aSection">
+            <ul>
+                <li><a target="_blank" href="https://cheun-id-tech-track.netlify.app/">Check out the clone</a></li>
+                <li><a target="_blank" href="https://github.com/cheunyinz/tech-track-22-23">Github repository</a></li>
+            </ul>
+            <a href="#">Go up</a>
+        </section>
+
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/cyinzhang/"><img src="assets/icons/social_media_icon/ld_icon.svg"
+                        alt="cheun yin Linkedin"></a></li>
+            <li><a href="https://github.com/cheunyinz"><img src="assets/icons/social_media_icon/gh_icon.svg"
+                        alt="cheun yin github"></a></li>
+            <li><a href="mailto: cheunyinzhang2001@hotmail.com"><img src="assets/icons/social_media_icon/mail_icon.svg"
+                        alt="cheun yin email"></a></li>
+        </ul>
+        <p>2023 Cheun Yin Zhang</p>
+    </footer>
+
+</body>
+
+</html>
