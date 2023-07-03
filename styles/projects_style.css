@@ -49,7 +49,7 @@ main article:first-of-type div img {
 main img {
   display: block;
   max-height: 32rem;
-  object-fit: cover;
+  object-fit: contain;
 
   width: 100%;
 }

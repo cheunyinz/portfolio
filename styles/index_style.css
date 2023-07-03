@@ -296,7 +296,7 @@ main > section:first-of-type ul li:last-of-type img {
   position: absolute;
   display: block;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 100%;
 }
@@ -533,7 +533,6 @@ main article:last-of-type section a:hover::after {
   main article section:first-of-type picture {
     grid-column: 3 / 5;
     order: 1;
-    background-color: black;
     border-radius: 2% 0 0 2%;
   }
 
